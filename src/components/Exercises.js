@@ -7,7 +7,6 @@ import ExerciseCard from "./ExerciseCard";
 const Exercises = ({setExercises, bodyPart, exercises}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
-
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
@@ -18,6 +17,7 @@ const Exercises = ({setExercises, bodyPart, exercises}) => {
     window.scrollTo({ top: 1800, behavior: 'smooth'})
   }
 
+  console.log(exercises)
   useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
