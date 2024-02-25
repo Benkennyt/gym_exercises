@@ -17,7 +17,6 @@ const Exercises = ({setExercises, bodyPart, exercises}) => {
     window.scrollTo({ top: 1800, behavior: 'smooth'})
   }
 
-  console.log(exercises)
   useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
